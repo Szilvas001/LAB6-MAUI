@@ -1,0 +1,52 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             BackgroundColor="Gray">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="10"
+            HorizontalOptions="Center">
+            <Button x:Name="colorChangeBtn" Text="Color" BackgroundColor="Green" TextColor="White" WidthRequest="100" Clicked="ColorChangeBtn_Clicked" />
+            <!-- Gomb színek váltása -->
+            <Button x:Name="colorChangeBtn" Text="Change Colors" BackgroundColor="Green" TextColor="White" WidthRequest="200" Clicked="ColorChangeBtn_Click" />
+
+            <!-- Ablak háttérszín váltása -->
+            <Button x:Name="backgroundToggleBtn" Text="Toggle Background" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="200" Clicked="BackgroundToggleBtn_Click" />
+
+            <!-- Számösszegzés és mezők letiltása -->
+            <HorizontalStackLayout Spacing="5">
+                <Entry x:Name="entry1" WidthRequest="100" Placeholder="0" Keyboard="Numeric" />
+                <Entry x:Name="entry2" WidthRequest="100" Placeholder="0" Keyboard="Numeric" />
+                <Label x:Name="resultLabel" Text="Result" TextColor="Black" VerticalTextAlignment="Center" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="10">
+                <Button x:Name="sumBtn" Text="Sum" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="80" Clicked="SumBtn_Click" />
+                <Button x:Name="disableEntriesBtn" Text="Disable Entries" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" Clicked="DisableEntriesBtn_Click" />
+            </HorizontalStackLayout>
+                <Entry WidthRequest="50" Placeholder="98"/>
+            <!-- Színes négyzetek színváltása -->
+            <HorizontalStackLayout Spacing="10">
+                <BoxView x:Name="rect1" Color="Gray" WidthRequest="50" HeightRequest="50" />
+                <BoxView x:Name="rect2" Color="Gray" WidthRequest="50" HeightRequest="50" />
+                <BoxView x:Name="rect3" Color="Gray" WidthRequest="50" HeightRequest="50" />
+                <Button x:Name="switchColorsBtn" Text="Switch Colors" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" Clicked="SwitchColorsBtn_Click" />
+            </HorizontalStackLayout>
+                <Button x:Name="disableEntriesBtn" Text="Disable" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="80" Clicked="DisableEntriesBtn_Click"/>
+            <!-- Csúszka és szövegbox -->
+            <HorizontalStackLayout Spacing="10">
+                <Slider x:Name="valueSlider" Minimum="0" Maximum="100" WidthRequest="200" ValueChanged="ValueSlider_ValueChanged" />
+                <Entry x:Name="sliderEntry" Text="0" WidthRequest="50" Keyboard="Numeric" TextChanged="SliderEntry_TextChanged" />
+            </HorizontalStackLayout>
+
+            <!-- Gomb létrehozása és törlése -->
+            <Button x:Name="addButtonBtn" Text="Add Button" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="200" Clicked="AddButton_Click" />
+            <VerticalStackLayout x:Name="buttonContainer" />
+            <!-- Button Container added -->
+            <!-- 3x3 gomb mátrix -->
+            <Grid x:Name="buttonGrid" RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto" />
+        </VerticalStackLayout>
+    </ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
